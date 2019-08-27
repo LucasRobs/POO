@@ -6,7 +6,7 @@ git config –global user.email “lucasrobs@alu.ufc.br”
 
 git init
 
-git remote add origin https://github.com/LucasRobs/Codes
+git remote add origin https://github.com/LucasRobs/POO
 
 git pull origin master
 
