@@ -1,4 +1,3 @@
-package aula7;
 import java.util.ArrayList;
 public class Cadastro {
   //Definir Variaveis da Classe;

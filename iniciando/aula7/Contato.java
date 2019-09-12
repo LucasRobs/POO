@@ -1,4 +1,3 @@
-package aula7;
 import java.util.ArrayList;
 public class Contato {
   // Declare as variaveis da Classe;
@@ -35,6 +34,6 @@ public class Contato {
   // Ex.:  Fulano - 32232323
 
   public String toString(){
-    return this.nome+this.telefone;
+    return this.nome+" "+this.telefone;
   }
 }
