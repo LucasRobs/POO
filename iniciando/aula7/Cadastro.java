@@ -1,8 +1,7 @@
 import java.util.ArrayList;
 public class Cadastro {
-  //Definir Variaveis da Classe;
   private ArrayList<Contato> dados = new ArrayList<Contato>();
-  //Metodo para Resetar a Agenda
+  
   public void resetAgenda(int maxContatos) {
     dados.clear();
   }
