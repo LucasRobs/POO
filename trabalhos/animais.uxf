@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="13.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>260</x>
+      <y>170</y>
+      <w>180</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Animal
+--
++ nome :String
++ idade : int
++ emitir_som : String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>130</x>
+      <y>310</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Cachorro
+--
++ correr : boolena</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>300</x>
+      <y>310</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Cavalo
+--
++ correr : boolena</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>470</x>
+      <y>310</y>
+      <w>150</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Preguica
+--
++ escalar : boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>320</x>
+      <y>220</y>
+      <w>50</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;90</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>320</x>
+      <y>220</y>
+      <w>250</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;60;230;60;230;90</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>170</x>
+      <y>220</y>
+      <w>200</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>180;30;180;60;30;60;30;90</additional_attributes>
+  </element>
+</diagram>
