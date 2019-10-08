@@ -29,6 +29,10 @@ class Animal {
         this.emitirSom = emitirSom;
     }
 
+    public Boolean isCorrer() {
+        return isCorrer();
+    }
+
     @Override
     public String toString() {
         return "{" +
@@ -82,7 +86,7 @@ class Cavalo extends Animal{
 
 class Preguica extends Animal{
     Boolean escalar = false;
-
+    Boolean correr = false;
     public Boolean isEscalar() {
         return this.escalar;
     }
@@ -95,9 +99,13 @@ class Preguica extends Animal{
         this.escalar = escalar;
     }
 
+    public Boolean isCorrer() {
+        return this.correr;
+    }
+
     @Override
     public String getEmitirSom() {
-        return "grannnnenenenem";
+        return "ammmmmm";
     }
 }
 
@@ -109,13 +117,33 @@ class Veterinario{
 }
 
 class Zoologico{
-    private ArrayList<Jaula> trabalhador = new ArrayList<Jaula>();
-    
-    public void adicionarJaula(){
-        Jaula x = new Jaula();
-        trabalhador.add(x);
+    private ArrayList<Animal> jaula = new ArrayList<Animal>();
+
+    public void adicionarJaula(String animal){
+          if(animal == "cachorro"){
+              Cachorro x = new Cachorro();
+              x.setCorrer(true);
+              x.setNome(animal);
+              this.jaula.add(x);
+          }else if(animal == "cavalo"){
+              Cavalo x = new Cavalo();
+              x.setNome(animal);
+              x.setCorrer(true);
+              this.jaula.add(x);
+          }else if(animal == "preguica"){
+              Preguica x = new Preguica();
+              x.setNome(animal);
+              this.jaula.add(x);
+          }
     }
-}
-class Jaula{
-    Animal animal;
+    public void listarBaderna(){
+        for(Animal x: jaula){
+            System.out.println(x.getNome()+" grito : "+ x.getEmitirSom());
+            if(x.isCorrer() == true){
+                System.out.println(" (começo correr)");
+            }else{
+                System.out.println(" (ficou vegetando)");
+            }
+        }
+    }
 }
