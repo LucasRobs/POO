@@ -4,7 +4,7 @@ class Conta{
     private String agencia = "0";
     private int saldo = 0;
     public Data abertura;
-    private static int numeroDeContas = 1;
+    private static int numeroDeContas = 0;
 
     Conta(String in_nome, int in_numero, String in_agencia, int in_saldo, int in_dia, int in_mes, int in_ano){
         this.nome = in_nome +" ID : "+ Conta.numeroDeContas;

@@ -1,0 +1,3 @@
+class Cartao extends Pagamento{
+    
+}
