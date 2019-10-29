@@ -10,7 +10,7 @@ class Cliente extends Pessoa{
         this.pagamento = pagamento;
     }
     public int getMensalidade() {
-        return pagamento.getPagamento();
+        return pagamento.getValor();
     }
 
 }

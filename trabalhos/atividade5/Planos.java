@@ -1,12 +1,12 @@
 class Planos{
-    private int mensalida = 70;
+    private int mensalidade = 70;
 
-    public int getMensalida() {
-        return this.mensalida;
+    public int getMensalidade() {
+        return this.mensalidade;
     }
 
-    public void setMensalida(int mensalida) {
-        this.mensalida = mensalida;
+    public void setMensalidade(int mensalidade) {
+        this.mensalidade = mensalidade;
     }
 
     public Planos escolherPlano(int x){
@@ -15,8 +15,10 @@ class Planos{
             return y;
         }else if(x == 2){
             Plano_medio y = new Plano_medio();
-            setMensalida(y.getMensalida() * 2);
+            setMensalidade(y.getMensalidade() * 2);
             return y;
         }
+        return null;
     }
+
 }
