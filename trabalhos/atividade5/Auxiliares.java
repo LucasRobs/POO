@@ -1,3 +1,0 @@
-class Auxiliares extends Funcionario{
-    
-}

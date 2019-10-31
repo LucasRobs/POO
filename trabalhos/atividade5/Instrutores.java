@@ -1,2 +1,0 @@
-class Instutores extends Funcionario{
-}

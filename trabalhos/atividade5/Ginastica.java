@@ -1,3 +1,0 @@
-class Ginastica extends Maquinas{
-    
-}

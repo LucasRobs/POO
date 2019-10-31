@@ -1,20 +1,15 @@
 class Pessoa{
     private String nome;
-    private String cpf;
-
-    public String getNome() {
-        return this.nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getCpf() {
-        return this.cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    private Data data_nasc;
+    private Endereco endereco;
+}
+class Data{
+    private int dia;
+    private int mes;
+    private int ano;
+    Data(int in_dia, int in_mes, int in_ano){
+        this.dia = in_dia;
+        this.mes = in_mes;
+        this.ano = in_ano;
     }
 }
