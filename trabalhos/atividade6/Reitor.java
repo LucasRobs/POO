@@ -1,0 +1,4 @@
+class Reitor extends Administrador{
+
+
+}

@@ -1,0 +1,3 @@
+class Secretaria extends Funcionario{
+
+}
