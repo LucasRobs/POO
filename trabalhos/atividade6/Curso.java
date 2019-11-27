@@ -1,30 +1,50 @@
+import java.util.ArrayList;
+
 class Curso{
-  private Disciplina disciplina;
-  private Aluno aluno;
+  private String nome;
+  private ArrayList<Disciplina> disciplinas;
+  private ArrayList<Aluno> alunos;
+  private ArrayList<Professor> professores;
   private Coordenador coordenador;
 
-  public Disciplina getDisciplina() {
-      return disciplina;
-  }
 
-  public void setDisciplina(Disciplina disciplina) {
-      this.disciplina = disciplina;
-  }
+    public String getNome() {
+        return this.nome;
+    }
 
-  public Aluno getAluno() {
-      return aluno;
-  }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-  public void setAluno(Aluno aluno) {
-      this.aluno = aluno;
-  }
+    public ArrayList<Disciplina> getDisciplinas() {
+        return this.disciplinas;
+    }
 
-  public Coordenador getCoordenador() {
-      return coordenador;
-  }
+    public void setDisciplinas(ArrayList<Disciplina> disciplinas) {
+        this.disciplinas = disciplinas;
+    }
 
-  public void setCoordenador(Coordenador coordenador) {
-      this.coordenador = coordenador;
-  }
+    public ArrayList<Aluno> getAlunos() {
+        return this.alunos;
+    }
 
+    public void setAlunos(ArrayList<Aluno> alunos) {
+        this.alunos = alunos;
+    }
+
+    public ArrayList<Professor> getProfessores() {
+        return this.professores;
+    }
+
+    public void setProfessores(ArrayList<Professor> professores) {
+        this.professores = professores;
+    }
+
+    public Coordenador getCoordenador() {
+        return this.coordenador;
+    }
+
+    public void setCoordenador(Coordenador coordenador) {
+        this.coordenador = coordenador;
+    }
 }

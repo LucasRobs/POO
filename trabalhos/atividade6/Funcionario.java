@@ -7,22 +7,19 @@ class Funcionario extends Pessoa{
   public int getId() {
     return id;
   }
-
-  public void setId(int id) {
-      this.id = id;
-  }
-
+  
   public double getSalario() {
       return salario;
   }
 
   public void setSalario(double in_salario) {
-      this.salario = salario;
+    this.salario = in_salario;
   }
-  public String toString() {
+  
+  /*public String toString() {
       return "{" +
           " nome='" + getNome() + "'" +
           ", cpf='" + getCpf() + "'" +
           ", salario='" + getSalario() + "}";
-  }
+  }*/
 }
