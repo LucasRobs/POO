@@ -1,42 +1,76 @@
-class Professor extends Pessoa{
-  private Disciplina disciplina;
-  private Horario horario;
-  private Turma turma;
+import java.util.ArrayList;
+
+class Professor extends Funcionario{
+  private ArrayList<Disciplina> disciplina = new ArrayList<Disciplina>();
+  private ArrayList<Horario> horario = new ArrayList<Horario>();
+  private ArrayList<Turma> turma = new ArrayList<Turma>();
   private Hist_Prof histProf;
 
-  public Disciplina getDisciplina() {
-      return disciplina;
-  }
+    public Professor() {
 
-  public void setDisciplina(Disciplina disciplina) {
-      this.disciplina = disciplina;
-  }
+    }
 
-  public Horario getHorario() {
-      return horario;
-  }
+    public Professor(ArrayList<Disciplina> disciplina, ArrayList<Horario> horario, ArrayList<Turma> turma, Hist_Prof histProf) {
+        this.disciplina = disciplina;
+        this.horario = horario;
+        this.turma = turma;
+        this.histProf = histProf;
+    }
 
-  public void setHorario(Horario horario) {
-      this.horario = horario;
-  }
+    public ArrayList<Disciplina> getDisciplina() {
+        return this.disciplina;
+    }
 
-  public Turma getTurma() {
-      return turma;
-  }
+    public void setDisciplina(ArrayList<Disciplina> disciplina) {
+        this.disciplina = disciplina;
+    }
 
-  public void setTurma(Turma turma) {
-      this.turma = turma;
-  }
+    public ArrayList<Horario> getHorario() {
+        return this.horario;
+    }
 
-  public Hist_Prof getHistProf() {
-      return histProf;
-  }
+    public void setHorario(ArrayList<Horario> horario) {
+        this.horario = horario;
+    }
 
-  public void setHistProf(Hist_Prof histProf) {
-      this.histProf = histProf;
-  }
+    public ArrayList<Turma> getTurma() {
+        return this.turma;
+    }
 
+    public void setTurma(ArrayList<Turma> turma) {
+        this.turma = turma;
+    }
 
+    public Hist_Prof getHistProf() {
+        return this.histProf;
+    }
 
+    public void setHistProf(Hist_Prof histProf) {
+        this.histProf = histProf;
+    }
+
+    public Professor disciplina(ArrayList<Disciplina> disciplina) {
+        this.disciplina = disciplina;
+        return this;
+    }
+
+    public Professor horario(ArrayList<Horario> horario) {
+        this.horario = horario;
+        return this;
+    }
+
+    public Professor turma(ArrayList<Turma> turma) {
+        this.turma = turma;
+        return this;
+    }
+
+    public Professor histProf(Hist_Prof histProf) {
+        this.histProf = histProf;
+        return this;
+    }
+
+    public void adicionarDisciplina(Disciplina x){
+        this.disciplina.add(x);
+    }
 
 }

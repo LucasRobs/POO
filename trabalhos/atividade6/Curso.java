@@ -2,9 +2,8 @@ import java.util.ArrayList;
 
 class Curso{
   private String nome;
-  private ArrayList<Disciplina> disciplinas;
-  private ArrayList<Aluno> alunos;
-  private ArrayList<Professor> professores;
+  private ArrayList<Disciplina> disciplinas = new ArrayList<Disciplina>();
+  private ArrayList<Aluno> alunos = new ArrayList<Aluno>();
   private Coordenador coordenador;
 
 
@@ -32,19 +31,24 @@ class Curso{
         this.alunos = alunos;
     }
 
-    public ArrayList<Professor> getProfessores() {
-        return this.professores;
-    }
-
-    public void setProfessores(ArrayList<Professor> professores) {
-        this.professores = professores;
-    }
-
     public Coordenador getCoordenador() {
         return this.coordenador;
     }
 
     public void setCoordenador(Coordenador coordenador) {
         this.coordenador = coordenador;
+    }
+
+    public void adicionarDisciplina(Disciplina x){
+        this.disciplinas.add(x);
+    }
+    public void listarDisciplinas(){
+        for(Disciplina x : disciplinas){
+            System.out.println("   "+ x.getNome());
+        }
+    }
+
+    public void adicionarAluno(Aluno x){
+        alunos.add(x);
     }
 }
