@@ -16,7 +16,7 @@ class Aluno extends Pessoa{
       int selecao = ler.nextInt();
       switch (selecao){
         case 1:
-          listarDisciplinas();
+          //inst.curso.get(x).alunos.get(z).listarDisciplinas();
           break;
         case 0:
           sair = true;
