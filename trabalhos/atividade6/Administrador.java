@@ -18,12 +18,12 @@ class Administrador extends Professor{
         System.out.println ("(2) Cadastrar curso.");
         System.out.println ("(3) Cadastrar disciplina.");
         System.out.println ("(4) Listar cursos e disciplinas.");
-        System.out.println ("(5) Listar cursos e disciplinas.");
+        System.out.println ("(5) Listar Funcionarios.");
         System.out.println ("(0) Sair.");
         int selecao = ler.nextInt();
         switch (selecao){
           case 1:
-            in_inst.adicionarFuncionario(criarFuncionario());
+            criarFuncionario(in_inst);
             break;
           case 2:
             in_inst.adicionarCurso(criarCurso());
@@ -52,7 +52,11 @@ class Administrador extends Professor{
 
   public Boolean login(){
     Scanner ler = new Scanner(System.in);
+    System.out.println("Login padrão : adm");
+    System.out.println("senha padrão : adm");
+    System.out.print("Login : ");
     String in_nome = ler.nextLine();
+    System.out.print("Senha : ");
     String in_senha = ler.nextLine();
     if(in_nome.equals(this.nome) && in_senha.equals(this.senha)){
       System.out.println("Login efetuado com sucesso!!!");
@@ -81,7 +85,8 @@ class Administrador extends Professor{
           int n = ler.nextInt();
           in_inst.curso.get(n).adicionarDisciplina(disciplina);
           break;
-        case 0:
+          case 0:
+          in_inst.adicionarDisciplina(disciplina);
           sair = true;
           break;
         default :
@@ -100,7 +105,7 @@ class Administrador extends Professor{
     return curso;
   }
 
-  public Funcionario criarFuncionario(){
+  public Funcionario criarFuncionario(Instituicao inst){
     Scanner ler = new Scanner(System.in);
     Funcionario f1 = new Funcionario();
     System.out.println ("(1) Professor.");
@@ -109,13 +114,13 @@ class Administrador extends Professor{
     int x = ler.nextInt();
     switch(x){
       case 1:
-        f1 = criarProfessor();
+        inst.adicionarProfessor(criarProfessor());
         break;
       case 2:
-        f1 = criarSecretaria();
+        inst.adicionarSecretaria(criarSecretaria());
         break;
       case 3:
-        f1 = criarCoordenador();
+        inst.adicionarCoordenador(criarCoordenador());
         break;
     }
     return f1;
@@ -145,7 +150,7 @@ class Administrador extends Professor{
     return f1;
   }
 
-  public Funcionario criarCoordenador(){
+  public Coordenador criarCoordenador(){
     Scanner ler = new Scanner(System.in);
     Coordenador f1 = new Coordenador();
     System.out.println("Nome do coordenador : ");

@@ -3,9 +3,9 @@ import java.util.ArrayList;
 class Curso{
   private String nome;
   private ArrayList<Disciplina> disciplinas = new ArrayList<Disciplina>();
-  private ArrayList<Aluno> alunos = new ArrayList<Aluno>();
+  protected ArrayList<Aluno> alunos = new ArrayList<Aluno>();
   private Coordenador coordenador;
-
+  Boolean ativo  = true;
 
     public String getNome() {
         return this.nome;
@@ -42,9 +42,19 @@ class Curso{
     public void adicionarDisciplina(Disciplina x){
         this.disciplinas.add(x);
     }
+
     public void listarDisciplinas(){
         for(Disciplina x : disciplinas){
             System.out.println("   "+ x.getNome());
+        }
+    }
+
+
+    public void listarAlunos(){
+        int i = 0;
+        for(Aluno x : alunos){
+            System.out.println(i +"  "+ x.getNome());
+            i++;
         }
     }
 

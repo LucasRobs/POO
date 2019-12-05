@@ -10,11 +10,12 @@ class Funcionario extends Pessoa{
   public void setSalario(double in_salario) {
     this.salario = in_salario;
   }
-  @Override
+
   public String toString(){
       return "{ "+
           " nome='" + getNome() + "'" +
           ", cpf='" + getCpf() + "'" +
           ", salario='" + getSalario() + "}";
   }
+
 }

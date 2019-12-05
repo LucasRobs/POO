@@ -1,14 +1,12 @@
+
+import java.util.ArrayList;
 class Turma{
-  private Aluno aluno;
+  private ArrayList<Aluno> aluno = new ArrayList<Aluno>();
   private Disciplina disciplina;
   private Professor prof;
 
-  public Aluno getAluno() {
-      return aluno;
-  }
-
-  public void setAluno(Aluno aluno) {
-      this.aluno = aluno;
+  public void adicionarAluno(Aluno x) {
+      this.aluno.add(x);
   }
 
   public Disciplina getDisciplina() {

@@ -3,7 +3,7 @@ import java.util.ArrayList;
 class Professor extends Funcionario{
   private ArrayList<Disciplina> disciplina = new ArrayList<Disciplina>();
   private ArrayList<Horario> horario = new ArrayList<Horario>();
-  private ArrayList<Turma> turma = new ArrayList<Turma>();
+  protected ArrayList<Turma> turma = new ArrayList<Turma>();
   private Hist_Prof histProf;
 
     public Professor() {
@@ -73,4 +73,15 @@ class Professor extends Funcionario{
         this.disciplina.add(x);
     }
 
+    public void adicionarTurma(Turma x){
+        this.turma.add(x);
+    }
+
+    public void listarTurmas(){
+        int i = 0;
+        for(Turma x : turma){
+            System.out.println(i +" "+ x.getDisciplina().getNome());
+            i++;
+          }
+    }
 }
