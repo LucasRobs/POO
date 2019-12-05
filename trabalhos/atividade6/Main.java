@@ -7,6 +7,8 @@ public class Main{
         UFCqx.menu(UFCqx);
       }catch(java.util.InputMismatchException e){
         System.out.println("Digitou letra em campo de numero");
+      }catch(java.lang.IndexOutOfBoundsException e){
+        System.out.println("Acesso negado!");
       }finally{
         System.out.println("reiniciando progama....");
       }

@@ -84,4 +84,13 @@ class Professor extends Funcionario{
             i++;
           }
     }
+    public void listarTurmasAtivas(){
+        int i = 0;
+        for(Turma x : turma){
+            if(x.ativo == true){
+                System.out.println(" "+ i +" "+ x.getDisciplina().getNome());
+                i++;
+            }
+        }
+    }
 }

@@ -8,6 +8,11 @@ class Secretaria extends Funcionario{
       System.out.println ("(1) Matricular aluno.");
       System.out.println ("(2) Cadastrar aluno.");
       System.out.println ("(3) Abrir turma.");
+      System.out.println ("(4) listar turmas ativas.");
+      System.out.println ("(5) listar todas turmas.");
+      System.out.println ("(6) listar turma do professor.");
+      System.out.println ("(7) listar turma do ativas.");
+      System.out.println ("(8) fechar turma.");
       System.out.println ("(0) sair.");
       int selecao = ler.nextInt();
       switch (selecao){
@@ -20,6 +25,18 @@ class Secretaria extends Funcionario{
         case 3:
           abrirTurma(inst);
           break;
+        case 4:
+          listarTurmas(inst);
+          break;
+        case 5:
+          listarTurmasDoProfessor(inst);
+          break;
+        case 6:
+          listarTurmasAtivas(inst);
+          break;
+        case 7:
+          fecharTurma(inst);
+          break;
         case 0:
           sair = true;
           break;
@@ -27,6 +44,40 @@ class Secretaria extends Funcionario{
           System.out.println ("Nenhuma opção Selecionada.");
           break;
       }
+    }
+  }
+  public void fecharTurma(Instituicao inst){
+    Scanner ler = new Scanner(System.in);
+    inst.listarProfessores();
+    System.out.println ("Qual o professor.");
+    int n = ler.nextInt();
+    inst.professores.get(n).listarTurmasAtivas();
+    System.out.println ("Qual a turma.");
+    int z = ler.nextInt();
+    inst.professores.get(n).turma.get(z).finaliarTurma();
+  }
+  public void listarTurmasDoProfessor(Instituicao inst){
+    Scanner ler = new Scanner(System.in);
+    inst.listarProfessores();
+    System.out.println ("Qual o professor.");
+    int n = ler.nextInt();
+    inst.professores.get(n).listarTurmasAtivas();
+  }
+
+  public void listarTurmasAtivas(Instituicao inst){
+    int z = 0;
+    for(Professor x : inst.professores){
+      System.out.println (z + x.getNome());
+      x.listarTurmasAtivas();
+      z++;
+    }
+  }
+
+  public void listarTurmas(Instituicao inst){
+    int z = 0;
+    for(Professor x : inst.professores){
+      System.out.println (z + x.getNome());
+      x.listarTurmas();
     }
   }
 

@@ -149,10 +149,15 @@ class Instituicao{
     Scanner ler = new Scanner(System.in);
     System.out.println("Digite seu cpf");
     String in_cpf = ler.nextLine();
+    boolean z = true;
     for(Secretaria x : secretarias){
       if(x.getCpf().equals(in_cpf)){
+        z = false;
         x.menu(in_inst);
       }
+    }
+    if(z){
+      System.out.println("Cpf invalido!");
     }
   }
 }
