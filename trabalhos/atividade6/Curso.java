@@ -5,7 +5,6 @@ class Curso{
   private ArrayList<Disciplina> disciplinas = new ArrayList<Disciplina>();
   protected ArrayList<Aluno> alunos = new ArrayList<Aluno>();
   private Coordenador coordenador;
-  Boolean ativo  = true;
 
     public String getNome() {
         return this.nome;
